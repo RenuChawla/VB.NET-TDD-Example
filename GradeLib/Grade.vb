@@ -18,6 +18,6 @@ Public Class Grade
     End Property
 
     Public Function Calculate() As String Implements IGrade.Calculate
-
+        Return "A"
     End Function
 End Class

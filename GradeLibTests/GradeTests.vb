@@ -13,6 +13,29 @@ Namespace GradeLib.Tests
             Assert.IsNotNull(target)
         End Sub
 
+        <TestMethod()> Public Sub Grade_ConstructorWrongParameter_ThrowException()
+            ' Score < 0
+            Dim score As Integer = -1
+            Dim target As IGrade = Nothing
+
+            Try
+                target = New Grade(score)
+            Catch ex As Exception
+            End Try
+
+            Assert.IsNull(target)
+
+            ' Score > 100
+            score = 101
+
+            Try
+                target = New Grade(score)
+            Catch ex As Exception
+            End Try
+
+            Assert.IsNull(target)
+        End Sub
+
         <TestMethod()> Public Sub Grade_CalculateScore80_IsGradeA()
             Dim score As Integer = 80
             Dim target As IGrade = New Grade(score)

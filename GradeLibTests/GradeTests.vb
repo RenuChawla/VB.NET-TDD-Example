@@ -53,6 +53,15 @@ Namespace GradeLib.Tests
 
             Assert.AreEqual(expected, actual)
         End Sub
+
+        <TestMethod()> Public Sub Grade_CalculateScore70_IsGradeB()
+            Dim score As Integer = 70
+            Dim target As IGrade = New Grade(score)
+            Dim expected As String = "B"
+            Dim actual As String = target.Calculate()
+
+            Assert.AreEqual(expected, actual)
+        End Sub
     End Class
 
 

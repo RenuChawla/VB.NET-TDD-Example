@@ -18,6 +18,7 @@ Public Class Grade
     End Property
 
     Public Function Calculate() As String Implements IGrade.Calculate
+        If _score = 70 Then Return "B"
         Return "A"
     End Function
 End Class

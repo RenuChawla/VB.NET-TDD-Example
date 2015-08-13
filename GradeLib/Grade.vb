@@ -5,8 +5,9 @@ Public Class Grade
     Private _score As Integer
 
     Sub New(score As Integer)
-        If score < 0 Then Throw New Exception("Wrong Parameter")
-        If score > 100 Then Throw New Exception("Wrong Parameter")
+        Select Case score
+            Case Is < 0, Is > 100 : Throw New Exception("Wrong Parameter")
+        End Select
 
         _score = score
     End Sub

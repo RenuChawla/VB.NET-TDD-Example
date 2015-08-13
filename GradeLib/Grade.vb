@@ -7,11 +7,13 @@ Public Class Grade
     Sub New(score As Integer)
         If score < 0 Then Throw New Exception("Wrong Parameter")
         If score > 100 Then Throw New Exception("Wrong Parameter")
+
+        _score = score
     End Sub
 
     Public ReadOnly Property Score As Integer Implements IGrade.Score
         Get
-
+            Return _score
         End Get
     End Property
 

@@ -23,7 +23,8 @@ Public Class Grade
             Case 80 : Return "A"
             Case 70 : Return "B"
             Case 60 : Return "C"
-            Case Else : Return ""
+            Case 50 : Return "D"
+            Case Else : Return "F"
         End Select
     End Function
 End Class

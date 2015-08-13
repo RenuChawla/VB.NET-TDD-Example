@@ -36,6 +36,15 @@ Namespace GradeLib.Tests
             Assert.IsNull(target)
         End Sub
 
+        <TestMethod()> Public Sub Grade_PropertyScore_KeepValue()
+            Dim score As Integer = 100
+            Dim target As IGrade = New Grade(score)
+            Dim expected As Integer = 100
+            Dim actual As Integer = target.Score
+
+            Assert.AreEqual(expected, actual)
+        End Sub
+
         <TestMethod()> Public Sub Grade_CalculateScore80_IsGradeA()
             Dim score As Integer = 80
             Dim target As IGrade = New Grade(score)
